@@ -8,7 +8,7 @@ Step 1:-
          Select Image which you want to Resize and upload on server.
          Index.cshtml
          
-<div class="jumbotron">
+`<div class="jumbotron">
     <h1>Demo Project</h1>
     <p class="lead">Add Watermark Text and Image to Photo  using C#</p>
 </div>
@@ -27,12 +27,12 @@ Step 1:-
         <img src="~/resizeImageStore/@ViewBag.ImgName" />
     </div>
 
-}
+}`
 
 Step 2:-
 
     Go to Controller section and add following assemblies
-using System.IO;
+`using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;   
@@ -94,17 +94,17 @@ using System.Drawing.Drawing2D;
             }
 Return myfile; 
 }
-
+`
 Step 3:-
 
 For we use large images for resizing so we need following settings on web.config file.
 
 3.1
- <system.web>
+` <system.web>
     <authentication mode="None" />
     <compilation debug="true" targetFramework="4.5" />
     <httpRuntime requestValidationMode="2.0" enableVersionHeader="false" targetFramework="4.5" maxRequestLength="15360000" fcnMode="Single" executionTimeout="900000" />
-  </system.web>
+  </system.web>`
   
 
  Step 4:-
@@ -115,7 +115,7 @@ Step 5:-
 
 Create Action in Controller where we call “ResizeImage()” function.
 
-public ActionResult UploadImageThumb(HttpPostedFileBase fileToUpload)
+`public ActionResult UploadImageThumb(HttpPostedFileBase fileToUpload)
        {
            string myfile= ResizeImage(fileToUpload);
            return RedirectToAction("Index", new { imgName = myfile });
@@ -127,7 +127,7 @@ public ActionResult UploadImageThumb(HttpPostedFileBase fileToUpload)
            
             ViewBag.ImgName = imgName;
             return View();
-        }
+        }`
 
 
 
