@@ -105,7 +105,7 @@ For we use large images for resizing so we need following settings on web.config
     <compilation debug="true" targetFramework="4.5" />
     <httpRuntime requestValidationMode="2.0" enableVersionHeader="false" targetFramework="4.5" maxRequestLength="15360000" fcnMode="Single" executionTimeout="900000" />
   </system.web>`
-  
+   
 
  Step 4:-
 
